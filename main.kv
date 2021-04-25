@@ -1,0 +1,131 @@
+# this is the kivy design file for calculator app
+<myCalc>
+    BoxLayout:
+        orientation: "vertical"
+        size: root.width, root.height
+        TextInput:
+            id: input_text
+            size_hint: (1,0.25)
+            halign: "right"
+            text: "0"
+            font_size: 50
+            multiline: False
+            background_color: (1,1,1,1)
+            background_normal: ''
+        GridLayout:
+            cals:4
+            rows:5
+            Button:
+                text:"C"
+                size_hint: (0.25,0.25)
+                font_size: 30
+                on_press: root.clear()
+                background_color: (247/255,7/255,7/255,1)
+            Button:
+                text:"+/-"
+                size_hint: (0.25,0.25)
+                font_size: 30
+                on_press: root.sign_button()
+            Button:
+                text:"%"
+                size_hint: (0.25,0.25)
+                font_size: 30
+                on_press: root.num_button("%")
+            Button:
+                text:"/"
+                size_hint: (0.25,0.25)
+                font_size: 30
+                on_press: root.num_button("/")
+            Button:
+                text:"7"
+                size_hint: (0.25,0.25)
+                font_size: 30
+                background_color: (157/255,157/255,157/255,1)
+                on_press: root.num_button(7)
+            Button:
+                text:"8"
+                size_hint: (0.25,0.25)
+                font_size: 30
+                background_color: (157/255,157/255,157/255,1)
+                on_press: root.num_button(8)
+            Button:
+                text:"9"
+                size_hint: (0.25,0.25)
+                font_size: 30
+                background_color: (157/255,157/255,157/255,1)
+                on_press: root.num_button(9)
+            Button:
+                text:"*"
+                size_hint: (0.25,0.25)
+                font_size: 30
+                on_press: root.num_button("*")
+            Button:
+                text:"4"
+                size_hint: (0.25,0.25)
+                font_size: 30
+                background_color: (157/255,157/255,157/255,1)
+                on_press: root.num_button(4)
+            Button:
+                text:"5"
+                size_hint: (0.25,0.25)
+                font_size: 30
+                background_color: (157/255,157/255,157/255,1)
+                on_press: root.num_button(5)
+            Button:
+                text:"6"
+                size_hint: (0.25,0.25)
+                font_size: 30
+                background_color: (157/255,157/255,157/255,1)
+                on_press: root.num_button(6)
+            Button:
+                text:"-"
+                size_hint: (0.25,0.25)
+                font_size: 30
+                on_press: root.num_button("-")
+            Button:
+                text:"1"
+                size_hint: (0.25,0.25)
+                font_size: 30
+                background_color: (157/255,157/255,157/255,1)
+                on_press: root.num_button(1)
+            Button:
+                text:"2"
+                size_hint: (0.25,0.25)
+                font_size: 30
+                background_color: (157/255,157/255,157/255,1)
+                on_press: root.num_button(2)
+            Button:
+                text:"3"
+                size_hint: (0.25,0.25)
+                font_size: 30
+                background_color: (157/255,157/255,157/255,1)
+                on_press: root.num_button(3)
+            Button:
+                text:"+"
+                size_hint: (0.25,0.25)
+                font_size: 30
+                on_press: root.num_button("+")
+            Button:
+                text: u"\u00AB"
+                size_hint: (0.25,0.25)
+                font_size: 40
+                on_press: root.remove()
+                background_color: (220/255,220/255,7/255,1)
+            Button:
+                text:"0"
+                size_hint: (0.25,0.25)
+                font_size: 30
+                background_color: (157/255,157/255,157/255,1)
+                on_press: root.num_button(0)
+            Button:
+                text:"."
+                size_hint: (0.25,0.25)
+                font_size: 30
+                background_color: (157/255,157/255,157/255,1)
+                on_press: root.dot_button()
+            Button:
+                text:"="
+                size_hint: (0.25,0.25)
+                font_size: 30
+                on_press: root.equalsto()
+                background_color: (0,1,0,1)
